@@ -43,27 +43,27 @@
       background-color: #ffffff00;
     }
   }
+}
 
-  @media (min-width: 768px) {
-    .hero {
-      background-image: url(../img/hero/background_tablet.jpg);
+@media (min-width: 768px) {
+  .hero {
+    background-image: url(../img/hero/background_tablet.jpg);
 
-      @media (min-resolution: 2dppx) {
-        background-image: url(../img/hero/background_tablet@2x.jpg);
-      }
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/hero/background_tablet@2x.jpg);
     }
+  }
 
-    .hero__container {
-      gap: 35px;
-    }
+  .hero__container {
+    gap: 35px;
+  }
 
-    .hero__title {
-      font-size: 52px;
-    }
+  .hero__title {
+    font-size: 52px;
+  }
 
-    .hero__text {
-      font-size: 18px;
-    }
+  .hero__text {
+    font-size: 18px;
   }
 }
 
