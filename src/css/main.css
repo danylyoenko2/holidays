@@ -1,4 +1,4 @@
-.partners__list, .hero__container, .hero {
+.partners__list, .hero .hero__container, .hero {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,33 +110,34 @@ img {
   }
 }
 .hero {
-  background-image: url(../img/hero/background.jpg);
+  background-image: url(../img/hero/background_mobile.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
-
-.hero__container {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../img/hero/background_mobile@2x.jpg);
+  }
+}
+.hero .hero__container {
   flex-direction: column;
   gap: 15px;
 }
-
-.hero__title {
+.hero .hero__title {
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
   text-align: center;
 }
-
-.hero__text {
+.hero .hero__text {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 18px;
   text-align: center;
 }
-
-.hero__btn {
+.hero .hero__btn {
   font-weight: 700;
   font-size: 13px;
   text-align: center;
@@ -145,19 +146,39 @@ img {
   border-radius: 25px;
   transition: background-color 0.5s ease;
 }
-.hero__btn:hover {
+.hero .hero__btn:hover {
   background-color: rgba(255, 255, 255, 0);
 }
-
 @media (min-width: 768px) {
-  .hero__container {
+  .hero .hero {
+    background-image: url(../img/hero/background_tablet.jpg);
+  }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero .hero {
+    background-image: url(../img/hero/background_tablet@2x.jpg);
+  }
+}
+@media (min-width: 768px) {
+  .hero .hero__container {
     gap: 35px;
   }
-  .hero__title {
+  .hero .hero__title {
     font-size: 52px;
   }
-  .hero__text {
+  .hero .hero__text {
     font-size: 18px;
+  }
+}
+
+@media (min-width: 991px) {
+  .hero {
+    background-image: url(../img/hero/background.jpg);
+  }
+}
+@media (min-width: 991px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 991px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../img/hero/background@2x.jpg);
   }
 }
 .partners {
